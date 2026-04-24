@@ -1,0 +1,57 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title><style>
+body{
+text-align:center;
+background:pink;
+font-family:sans-serif;
+}
+
+h1{
+color:white;
+margin-top:80px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+font-size:18px;
+border:none;
+border-radius:10px;
+}
+
+#yes{background:green;color:white;}
+#no{background:red;color:white;position:absolute;}
+</style></head><body><h1>🎉 Happy Birthday SHIVANGI 🎂</h1><h2>Party dogi ya nahi? 😏</h2><button id="yes" onclick="yesClick()">Yes 😍</button>
+<button id="no" onclick="moveNo()">No 😜</button>
+
+<script>
+
+let first=false;
+let count=0;
+
+function moveNo(){
+let btn=document.getElementById("no");
+
+if(!first){
+first=true;
+return;
+}
+
+btn.style.left=Math.random()*300+"px";
+btn.style.top=Math.random()*500+"px";
+
+count++;
+
+if(count>5){
+alert("Please yes kar do na 🥺");
+}
+}
+
+function yesClick(){
+document.body.innerHTML="<h1>Yay 🎉 Good girl 😏 ab cake ready rakho 🎂</h1>";
+}
+
+</script></body>
+</html>
